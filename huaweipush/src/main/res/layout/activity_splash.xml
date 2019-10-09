@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="华为推送" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="level"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/tv_log_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLogIntent"
+        android:text="输出华为Intent" />
+
+    <Button
+        android:id="@+id/tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onAutoStart"
+        android:text="跳转自启动" />
+
+</LinearLayout>

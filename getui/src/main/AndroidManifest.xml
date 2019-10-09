@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.crazy.getui">
+
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".GeTuiActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".GetuiSdkDemoActivity" />
+        <activity android:name=".ginsight.GinsightMainActivity" />
+        <activity android:name=".gssdk.GSMainActivity" />
+
+        <receiver
+            android:name=".ginsight.GInsightEventReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.getui.gis.action.xf3zVP3yu97WPycYBHYhU9" /><!--替换为第三方应用的APPID-->
+            </intent-filter>
+        </receiver>
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+        <service android:name=".DemoIntentService" />
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name=".DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+    </application>
+
+</manifest>
